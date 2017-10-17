@@ -10,16 +10,17 @@ mfxvideo++.h is a thin header-only cpp wrapper to libmfx.a.
 
 [App] <==MFXxxx API==> [libmfx.a] <== search so files ==> [libmfxhw64-p.so] <==> [libva.so.1]
 
-   libmfx.a will assume media SDK's userspace part has been installed and search under following hard-coded location:
-          /opt/intel/mediasdk/lib64(if mfx_dispatcher is configured as cmake -D__ARCH=intel64) 
-      or  /opt/intel/mediasdk/lib32(otherwise)
-      and it seaches for filename patter satisfy basename.<mj>.<mn> where:
+libmfx.a will assume media SDK's userspace part has been installed and search under following hard-coded location:
+       
+           /opt/intel/mediasdk/lib64(if mfx_dispatcher is configured as cmake -D__ARCH=intel64) 
+       or  /opt/intel/mediasdk/lib32(otherwise)
+   
+       and it seaches for filename patter satisfy basename.mj.mn where:
 
             [*]  basename is libmfxhw64-p.so in HW/linux64 cases
             [*]  mj & mn is numbers
             
-      so it will omit the symbolic link(cause it has  no version), after choose one core MediaSDK libraries, it will 
-      dynamically load it and also the dependent libva.so.1 files.
+so it will omit the symbolic link(cause it has  no version), after choose one core MediaSDK libraries, it will dynamically load it and also the dependent libva.so.1 files.
 
 [libva.so.1]
 
