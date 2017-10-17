@@ -25,7 +25,7 @@ actuall driver used by libva is configured through following enviroment variable
 setup by mediaSDK install script:
 
   $ cat /etc/profile.d/intel-mediasdk.sh 
-  # add libva driver path/name exporting for intel media solution
+  #add libva driver path/name exporting for intel media solution
   export LIBVA_DRIVERS_PATH=/opt/intel/mediasdk/lib64
   export LIBVA_DRIVER_NAME=iHD
   
