@@ -2,7 +2,7 @@
 notes on video
 
 
-******* HOW media SDK app is calling right va-api **********
+## HOW media SDK app is calling right va-api
 
 
 MSDK(intel media SDK） app, usually linked statically against libmfx.a(mfx_dispatcher: under /opt/intel/media/opensource), 
@@ -22,7 +22,7 @@ libmfx.a will assume media SDK's userspace part has been installed and search un
             
 so it will omit the symbolic link(cause it has  no version), after choose one core MediaSDK libraries, it will dynamically load it and also the dependent libva.so.1 files.
 
-[libva.so.1]
+the specific libva dynamically linked is determined by *LD_LIBRARY_PATH*.
 
 actuall driver used by libva is configured through following enviroment variables which will be 
 setup by mediaSDK install script:
