@@ -24,10 +24,10 @@ mfxvideo++.h is a thin header-only cpp wrapper to libmfx.a.
 actuall driver used by libva is configured through following enviroment variables which will be 
 setup by mediaSDK install script:
 
-  $ cat /etc/profile.d/intel-mediasdk.sh 
-  #add libva driver path/name exporting for intel media solution
-  export LIBVA_DRIVERS_PATH=/opt/intel/mediasdk/lib64
-  export LIBVA_DRIVER_NAME=iHD
+     $ cat /etc/profile.d/intel-mediasdk.sh 
+     #add libva driver path/name exporting for intel media solution
+     export LIBVA_DRIVERS_PATH=/opt/intel/mediasdk/lib64
+     export LIBVA_DRIVER_NAME=iHD
   
 unlike the open-sourced i965/i915 VA-ＡＰＩ-driver,this one is the closed-sourced ＶＡ-API-driver for intel HD graphic provided by 
 media ＳＤＫ.
